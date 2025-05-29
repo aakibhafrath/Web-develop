@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Navigation Layout</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fa;
+    color: #333;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  /* Left navigation */
+  nav {
+    display: flex;
+    gap: 25px;
+  }
+  nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #007BFF;
+  }
+
+  /* Center right vertical block */
+  .middle-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    min-width: 140px;
+  }
+  .middle-section .text-line {
+    font-weight: 600;
+    font-size: 20px;
+    color: #222;
+  }
+  .middle-section .join-btn {
+    margin-top: 12px;
+    padding: 10px 24px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    background: #007BFF;
+    border: none;
+    border-radius: 28px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: stretch;
+    text-align: center;
+  }
+  .middle-section .join-btn:hover {
+    background: #0056b3;
+  }
+
+  /* Right discount text */
+  .right-section {
+    font-weight: 600;
+    font-size: 14px;
+    color: #e63946;
+    background: #ffe5e5;
+    padding: 8px 16px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    .middle-section {
+      flex-direction: row;
+      align-items: center;
+      gap: 15px;
+      min-width: auto;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+  </nav>
+  <div class="middle-section">
+    <div class="text-line">Get In</div>
+    <div class="text-line">Relax</div>
+    <div class="text-line">Today</div>
+    <button class="join-btn">Join now-&gt;</button>
+  </div>
+  <div class="right-section">25% discount on first time</div>
+</header>
+</body>
+</html>
